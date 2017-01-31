@@ -10,7 +10,7 @@ namespace pamoka
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("labas");
+            Console.WriteLine("labas pasauli kkkdjfdk");
             Console.ReadLine();
         }
     }
