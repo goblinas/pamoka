@@ -10,15 +10,15 @@ namespace pamoka
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 1;
+            Point p1 = new Point(1,3,'*');
+          /*  p1.x = 1;
             p1.y = 3;
-            p1.symb = '*';
+            p1.symb = '*';*/
             p1.Draw();
 
-            Point p2 = new Point();
-            p2.x = 5;
-            p2.y = 8;
+           Point p2 = new Point();
+            p2.x = 50;
+            p2.y = 80;
             p2.symb = '+';
             p2.Draw();
 
