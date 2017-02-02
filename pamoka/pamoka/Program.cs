@@ -10,19 +10,32 @@ namespace pamoka
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1,3,'*');
-          /*  p1.x = 1;
-            p1.y = 3;
-            p1.symb = '*';*/
+            Point p1 = new Point(10,10,'*');
             p1.Draw();
 
-           Point p2 = new Point();
-            p2.x = 50;
-            p2.y = 80;
-            p2.symb = '+';
+           Point p2 = new Point(20,20,'+');
             p2.Draw();
+       
+            List<int> numList = new List<int>();
+            numList.Add(0);
+            numList.Add(5);
+            numList.Add(14);
+            numList.Add(5);
 
-            Console.ReadLine();
+            int a = numList[0];
+            int b = numList[1];
+            int c = numList[3];
+            int d = numList[2];
+
+            foreach(int i in numList)
+                {
+               Console.WriteLine(i);
+                }
+            numList.RemoveAt(0);
+            List<Point> plist = new List<Point>();
+            plist.Add(p1);
+            plist.Add(p2);
+     Console.ReadLine();
         }
     }
 }
