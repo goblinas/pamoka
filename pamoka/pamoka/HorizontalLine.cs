@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace pamoka
 {
-    class HorizontalLine
+    class HorizontalLine : Figura
     {
-        List<Point> plist;
+
         public HorizontalLine(int xLeft , int xRight , int y , char symb )
         {
             plist = new List<Point>();
@@ -17,11 +17,6 @@ namespace pamoka
                 Point p = new Point(x,y,symb);
                 plist.Add(p);
             }
-        }
-        public void Drow()
-        {
-            foreach (Point p in plist)
-                p.Draw();
         }
     }
 }

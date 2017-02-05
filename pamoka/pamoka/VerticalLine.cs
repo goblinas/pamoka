@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 
 namespace pamoka
 {
-    class VerticalLine
+    class VerticalLine : Figura
     {
-        List<Point> plist;
+
         public VerticalLine(int yUP, int yDown, int x, char symb)
         {
             plist = new List<Point>();
-            for (int n = yUP; n <= yDown; n++)
+            for (int y = yUP; y <= yDown; y++)
             {
-                Point p = new Point(x,n, symb);
+                Point p = new Point(x,y, symb);
                 plist.Add(p);
             }
         }
-        public void Drow()
-        {
-            foreach (Point p in plist)
-                p.Draw();
-        }
+
     }
 }
