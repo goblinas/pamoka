@@ -54,6 +54,12 @@ namespace pamoka
             Console.SetCursorPosition(x, y);
             Console.Write(symb);
         }
+
+        public void Clear()
+        {
+            symb = ' ';
+            Draw();
+        }
         public override string ToString()
         {
             return x + "," + y + "," + symb;

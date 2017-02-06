@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace pamoka
@@ -23,7 +24,23 @@ namespace pamoka
             Point p = new Point(4, 8, '*');
             Snace snace = new Snace(p, 4, Direction.RIGHT);
             snace.Drow();
-            Console.ReadLine();
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+            Thread.Sleep(300);
+            snace.Move();
+          //  Console.ReadLine();
+            
         }
     }
 }
