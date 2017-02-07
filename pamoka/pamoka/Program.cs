@@ -24,23 +24,19 @@ namespace pamoka
             Point p = new Point(4, 8, '*');
             Snace snace = new Snace(p, 4, Direction.RIGHT);
             snace.Drow();
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-            Thread.Sleep(300);
-            snace.Move();
-          //  Console.ReadLine();
-            
+
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snace.HandleKey(key.Key);
+                }
+
+                Thread.Sleep(100);
+                snace.Move();
+            }
+          //  Console.ReadLine();           
         }
     }
 }
