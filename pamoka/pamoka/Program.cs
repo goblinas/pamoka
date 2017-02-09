@@ -25,15 +25,28 @@ namespace pamoka
             Snace snace = new Snace(p, 4, Direction.RIGHT);
             snace.Drow();
 
+            FoodCreator foodCreator = new FoodCreator(80, 25,'$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+
             while(true)
             {
+              if(snace.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snace.Move();
+                }
                 if(Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snace.HandleKey(key.Key);
                 }
 
-                Thread.Sleep(100);
+                Thread.Sleep(200);
                 snace.Move();
             }
           //  Console.ReadLine();           
